@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +18,7 @@ public class Visit extends BaseEntity
 	@Column(name = "description")
 	private String description;
 	
-	@ManyToMany
+	@ManyToOne
 	@JoinColumn(name = "pet_id")
 	private Pet pet;
 	
