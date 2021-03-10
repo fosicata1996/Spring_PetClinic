@@ -19,8 +19,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import guru.springframework.springPetClinic.model.Owner;
 import guru.springframework.springPetClinic.repositories.OwnerRepository;
-import guru.springframework.springPetClinic.repositories.PetRepository;
-import guru.springframework.springPetClinic.services.PetTypeService;
 
 @ExtendWith(MockitoExtension.class)
 class OwnerSDJpaServiceTest
@@ -29,12 +27,6 @@ class OwnerSDJpaServiceTest
 	
 	@Mock
 	OwnerRepository repository;
-	
-	@Mock
-	PetRepository petRepository;
-	
-	@Mock
-	PetTypeService petTypeService;
 	
 	@InjectMocks
 	OwnerSDJpaService service;
