@@ -8,23 +8,17 @@ import org.springframework.stereotype.Service;
 
 import guru.springframework.springPetClinic.model.Owner;
 import guru.springframework.springPetClinic.repositories.OwnerRepository;
-import guru.springframework.springPetClinic.repositories.PetRepository;
 import guru.springframework.springPetClinic.services.OwnerService;
-import guru.springframework.springPetClinic.services.PetTypeService;
 
 @Service
 @Profile("springdatajpa")
 public class OwnerSDJpaService implements OwnerService
 {
 	private final OwnerRepository ownerRepository;
-	private final PetRepository petRepository;
-	private final PetTypeService petTypeService;
 	
-	public OwnerSDJpaService(OwnerRepository ownerRepository, PetRepository petRepository, PetTypeService petTypeService)
+	public OwnerSDJpaService(OwnerRepository ownerRepository)
 	{
 		this.ownerRepository = ownerRepository;
-		this.petRepository = petRepository;
-		this.petTypeService = petTypeService;
 	}
 	
 	@Override
